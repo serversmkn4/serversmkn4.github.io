@@ -1,4 +1,11 @@
 ---
 layout: default
 ---
-<div id="search-results"></div>
+
+<div id="search-results">
+    {% for result in site.simple_search.results %}
+        <h2><a href="{{ result.url }}">{{ result.title }}</a></h2>
+        <p>{{ result.excerpt }}</p>
+    {% endfor %}
+</div>
+
