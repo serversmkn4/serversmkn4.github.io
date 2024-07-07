@@ -1,28 +1,27 @@
 ---
+layout: post
 ---
 
 
 Mengamankan pengguna root di Ubuntu 20.04 adalah langkah penting untuk meningkatkan keamanan sistem. Berikut adalah beberapa langkah yang dapat Anda lakukan:
 
-1. Nonaktifkan Login Root
+## 1. Nonaktifkan Login Root
 Nonaktifkan akses login langsung ke akun root untuk mencegah pengguna lain mencoba login sebagai root. Biasanya, ini sudah dilakukan secara default pada instalasi Ubuntu, tetapi Anda dapat memeriksanya dengan cara berikut:
 
 Edit file konfigurasi SSH:
 
-bash
-Salin kode
+
 sudo nano /etc/ssh/sshd_config
+
 Cari baris berikut dan pastikan diatur seperti ini:
 
-plaintext
-Salin kode
-PermitRootLogin no
+'''PermitRootLogin no'''
 Simpan perubahan dan restart layanan SSH:
 
-bash
-Salin kode
+
 sudo systemctl restart sshd
-2. Gunakan Sudo untuk Tugas Administratif
+
+## 2. Gunakan Sudo untuk Tugas Administratif
 Gunakan perintah sudo untuk menjalankan tugas administratif. Tambahkan pengguna Anda ke grup sudo jika belum ada.
 
 Tambahkan pengguna ke grup sudo:
@@ -37,24 +36,23 @@ Salin kode
 sudo whoami
 Ini seharusnya mengembalikan "root" jika pengguna memiliki akses sudo.
 
-3. Gunakan Kunci SSH untuk Otentikasi
+## 3. Gunakan Kunci SSH untuk Otentikasi
 Gunakan kunci SSH daripada kata sandi untuk otentikasi yang lebih aman.
 
 Buat pasangan kunci SSH:
 
-bash
-Salin kode
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
 Tambahkan kunci publik ke server:
 
-bash
-Salin kode
+
 ssh-copy-id username@server_ip
+
 Nonaktifkan otentikasi kata sandi di SSH:
 
-bash
-Salin kode
+
 sudo nano /etc/ssh/sshd_config
+
 Cari dan ubah baris berikut:
 
 plaintext
