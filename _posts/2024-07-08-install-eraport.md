@@ -6,7 +6,35 @@ categories: misc
 
 ## Siapkan Server
 
+[Install Server Ubuntu]({{ site.baseurl }}{% link 2024-07-07-install-server-ubuntu-keamanan-dasar.md %})
+
 ## Install Postrgree SQL
+`sudo apt update`
+
+`sudo apt install postgresql postgresql-contrib`
+
+`sudo systemctl start postgresql`
+
+`sudo systemctl enable postgresql`
+
+`sudo -i -u postgres`
+
+`psql`
+
+```
+CREATE DATABASE mydatabase;
+CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypassword';
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO myuser;
+```
+
+`\q`
+
+`exit`
+
+### Memulihkan database
+
+`pg_restore -U username -d database_name -v /path/to/destination/backup_file.sql`
+
 
 ## Download Aplikasi Eraaport 
 
