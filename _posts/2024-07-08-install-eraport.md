@@ -6,7 +6,7 @@ categories: misc
 
 ## Siapkan Server
 
-[Link to a page]({% link 2024-07-07-install-server-ubuntu-keamanan-dasar.md %})
+[Install Ubuntu](https://serversmkn4.github.io/2024/07/07/install-server-ubuntu-keamanan-dasar.html)
 
 ## Install Postrgree SQL
 `sudo apt update`
