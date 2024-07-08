@@ -1,7 +1,5 @@
 ---
 layout: post
-title: "Install Eraport SMK di Ubuntu"
-categories: misc
 ---
 
 ## Siapkan Server
