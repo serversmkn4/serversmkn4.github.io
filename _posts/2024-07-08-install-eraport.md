@@ -6,7 +6,7 @@ categories: misc
 
 ## Siapkan Server
 
-[Install Server Ubuntu]({{ site.baseurl }}{% link 2024-07-07-install-server-ubuntu-keamanan-dasar.md %})
+[Link to a page]({% link 2024-07-07-install-server-ubuntu-keamanan-dasar.md %})
 
 ## Install Postrgree SQL
 `sudo apt update`
