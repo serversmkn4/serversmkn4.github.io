@@ -76,6 +76,9 @@ DB_PASSWORD=db_pass
 
 `php artisan db:seed`
 
+## Perbaikan Erorr
+chmod 775 pada folder storage logs
+
 
 
 
